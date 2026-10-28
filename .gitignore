@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+healer-state.json
+healer-audit.jsonl
+*.tmp
+.DS_Store

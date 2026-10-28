@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automated-code-evaluation-platform"
+version = "0.1.0"
+description = "Clean-room demo: auto-detecting evaluation inputs, a candidate runner, and a bounded self-healing CI assistant."
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["evaluator*", "ci_healer*"]

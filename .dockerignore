@@ -1,0 +1,7 @@
+.git
+__pycache__
+*.pyc
+tests/
+.venv/
+healer-state.json
+healer-audit.jsonl

@@ -10,6 +10,15 @@
 > is only what this repository's own tests prove, and the test counts
 > below are the counts this repo actually achieves.
 
+## The 90-second story
+
+Evaluating code submissions is messy at the edges: the same problem
+can arrive as JSON, JSONL, CSV, `key=value` pairs, or plain lines,
+and a naive parser either guesses wrong or crashes. This project
+makes that edge explicit — an auto-detecting dispatcher with a
+documented precedence order that refuses ambiguous input instead of
+guessing — then runs the normalised cases against reference
+solutions in a subprocess with a timeout.
 
 Separately, CI failures are not all alike, so this project does not
 treat them alike: a small classifier names six failure modes *defined

@@ -1,6 +1,6 @@
 # Automated Code-Evaluation Platform with Self-Healing CI/CD
 
-> **Clean-room re-implementation — read this first.** This repository
+> **Clean-room re-implementation: read this first.** This repository
 > was built from scratch to demonstrate the *concepts* in a resume
 > bullet (an LLM code-evaluation platform, an auto-detecting input
 > dispatcher, CI failure recovery, Docker slimming, and test
@@ -35,7 +35,7 @@ flowchart LR
 
 ## How to run
 
-Requirements: Python 3.12, standard library only — nothing to install.
+Requirements: Python 3.12, standard library only, nothing to install.
 
 ```bash
 # Full test suite (70 tests, see below)
@@ -64,7 +64,7 @@ python3 scripts/select_tests.py --full   # full suite, always available
 ```
 
 The dispatcher itself is 344 lines (`wc -l evaluator/dispatcher.py`),
-inside its 320–345 target. It supports JSON object, JSON list,
+inside its 320-345 target. It supports JSON object, JSON list,
 JSONL, CSV, `key=value` pairs, and plain lines, in that precedence
 order. In every shape, `input` means one argument and `inputs` means
 a list of arguments; supplying both is ambiguous and rejected.
@@ -109,7 +109,7 @@ and exits cleanly instead of inventing a number. Run
 machine with Docker to get a real measurement. This repo therefore
 claims slimming *techniques*, not a measured gigabyte saving.
 
-## Function-level test filtering — guardrail
+## Function-level test filtering: guardrail
 
 `ci_healer/test_filter.py` and `scripts/select_tests.py` map changed
 function names to test files via an explicit mapping plus name
@@ -140,7 +140,7 @@ matching against available test files. Two guardrails are built in:
 Proves (all checked by the test suite, run locally with
 `python3 -m unittest discover -s tests -v`):
 
-- **70 tests pass, 0 fail** — 36 in `tests/test_dispatcher.py`
+- **70 tests pass, 0 fail**: 36 in `tests/test_dispatcher.py`
   (every shape, precedence, ambiguity, and malformed case), 11 in
   `tests/test_evaluator.py` (reference solutions with independent
   expectations, timeout, exception capture, structured results),
@@ -154,10 +154,10 @@ Proves (all checked by the test suite, run locally with
 Does **not** prove:
 
 - Any production behaviour, incident, team process, or measured
-  saving — none of those are in this repository, by design.
-- Docker image sizes — Docker was absent here, so nothing was built
+  saving. None of those are in this repository, by design.
+- Docker image sizes: Docker was absent here, so nothing was built
   or measured locally (see the caveat above).
-- Live GitHub API behaviour — the client is tested with stubbed
+- Live GitHub API behaviour: the client is tested with stubbed
   HTTP, not against the real API, and the demo uses a local jobs
   file. Live calls need `GITHUB_TOKEN` and a real run id.
 

@@ -1,14 +1,6 @@
 # Automated Code-Evaluation Platform with Self-Healing CI/CD
 
-> **Clean-room re-implementation: read this first.** This repository
-> was built from scratch to demonstrate the *concepts* in a resume
-> bullet (an LLM code-evaluation platform, an auto-detecting input
-> dispatcher, CI failure recovery, Docker slimming, and test
-> filtering). It is **not** the original production code, it does not
-> reproduce any production system, and it makes no claim about any
-> company's metrics, team, or incidents. Every claim in this README
-> is only what this repository's own tests prove, and the test counts
-> below are the counts this repo actually achieves.
+
 
 
 Separately, CI failures are not all alike, so this project does not

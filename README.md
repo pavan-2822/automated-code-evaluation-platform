@@ -23,16 +23,15 @@ function-level test filtering that never replaces the full suite.
 
 ```mermaid
 flowchart LR
-    Sub[Submission\n(any shape)] --> Disp[Dispatcher\n detect + normalise]
-    Disp --> Eval[Evaluator\n subprocess + timeout]
-    Eval --> Result[Structured result\n pass/fail/timeout/error]
-    CI[Failed CI run] --> Class[Classifier\n 6 repo-defined modes]
-    Class --> Heal[Healer\n budget + audit JSONL]
-    Heal --> GH[GitHub API\n rerun failed jobs]
-    Diff[Changed functions] --> Filter[Test filter\n mapped targets]
-    Filter --> Note[Fast feedback only\n full suite still runs in CI]
+    Sub["Submission<br/>(any shape)"] --> Disp["Dispatcher<br/>detect + normalise"]
+    Disp --> Eval["Evaluator<br/>subprocess + timeout"]
+    Eval --> Result["Structured result<br/>pass/fail/timeout/error"]
+    CI["Failed CI run"] --> Class["Classifier<br/>6 repo-defined modes"]
+    Class --> Heal["Healer<br/>budget + audit JSONL"]
+    Heal --> GH["GitHub API<br/>rerun failed jobs"]
+    Diff["Changed functions"] --> Filter["Test filter<br/>mapped targets"]
+    Filter --> Note["Fast feedback only<br/>full suite still runs in CI"]
 ```
-
 ## How to run
 
 Requirements: Python 3.12, standard library only, nothing to install.
